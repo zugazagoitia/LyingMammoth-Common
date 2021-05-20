@@ -6,11 +6,54 @@ LyingMammoth-Common is a library containing models and utilities for its use acr
 
 ## Installation
 
-Use gradle to use the library.
+Use gradle.
 
 ```yml
-s
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://repo.zugazagoitia.com/repository/main"
+    }
+    
+}
+
+dependencies {
+
+    implementation group: 'com.zugazagoitia.lyingMammoth', name:'common', version: '1.0'
+}
+
+
 ```
+
+
+Or else, use maven
+```xml
+<project>
+  ...
+  <repositories>
+    <repository>
+      <id>main</id>
+      <url>https://repo.zugazagoitia.com/repository/main</url>
+    </repository>
+  </repositories>
+  
+ 
+  <dependencies>
+    <dependency>
+      <groupId>com.zugazagoitia.lyingMammoth</groupId>
+      <artifactId>common</artifactId>
+      <version>1.0</version>
+    </dependency>
+  </dependencies>
+  
+  ...
+</project>
+
+
+```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
