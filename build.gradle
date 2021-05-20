@@ -33,12 +33,12 @@ test {
 publishing {
     publications{
         maven(MavenPublication) {
-            from components.java
+            from(components.java)
         }
     }
     repositories {
         maven {
-            name = "common"
+            name = "GitHubPackages"
             url = "https://maven.pkg.github.com/zugazagoitia/LyingMammoth-Common"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
