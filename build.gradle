@@ -38,7 +38,7 @@ publishing {
     }
     repositories {
         maven {
-            name = "LyingMammoth-Common"
+            name = "common"
             url = "https://maven.pkg.github.com/zugazagoitia/LyingMammoth-Common"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
