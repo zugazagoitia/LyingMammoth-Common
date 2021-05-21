@@ -31,3 +31,10 @@ jobs:
 
       - name: 🏗️ Build with Gradle
         run: ./gradlew build
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1.5.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+
+

@@ -1,6 +1,8 @@
 
 
-# LyingMammoth-Common  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/zugazagoitia/LyingMammoth-Common) [![Java CI](https://github.com/zugazagoitia/LyingMammoth-Common/actions/workflows/main.yml/badge.svg)](https://github.com/zugazagoitia/LyingMammoth-Common/actions/workflows/main.yml) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+# LyingMammoth-Common 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/zugazagoitia/LyingMammoth-Common) [![Java CI](https://github.com/zugazagoitia/LyingMammoth-Common/actions/workflows/main.yml/badge.svg)](https://github.com/zugazagoitia/LyingMammoth-Common/actions/workflows/main.yml) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0) [![codecov](https://codecov.io/gh/zugazagoitia/LyingMammoth-Common/branch/master/graph/badge.svg?token=PVXCVQ9J4H)](https://codecov.io/gh/zugazagoitia/LyingMammoth-Common)
+
 
 LyingMammoth-Common is a library containing models and utilities for its use across the LyingMammoth project.
 
