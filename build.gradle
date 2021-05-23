@@ -54,10 +54,13 @@ publishing {
     repositories {
         maven {
             name = "main"
-            url = "https://repo.zugazagoitia.com/repository/main/"
+            url = "https://repo.zugazagoitia.com/releases/"
             credentials {
                 username = System.getenv("MAVEN_USER")
                 password = System.getenv("MAVEN_PASS")
+            }
+            authentication {
+                basic(BasicAuthentication)
             }
         }
     }

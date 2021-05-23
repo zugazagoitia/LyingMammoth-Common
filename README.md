@@ -16,7 +16,7 @@ repositories {
     mavenCentral()
 
     maven {
-        url "https://repo.zugazagoitia.com/repository/main"
+        url "https://repo.zugazagoitia.com"
     }
     
 }
@@ -36,8 +36,8 @@ Or else, use maven
   ...
   <repositories>
     <repository>
-      <id>main</id>
-      <url>https://repo.zugazagoitia.com/repository/main</url>
+      <id>Zugazagoitia</id>
+      <url>https://repo.zugazagoitia.com</url>
     </repository>
   </repositories>
   
