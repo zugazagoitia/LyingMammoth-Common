@@ -39,7 +39,7 @@ jacocoTestReport {
     reports {
         xml.required = true
         html.required = false
-        xml.outputLocation = layout.buildDirectory.file('/reports/jacoco/report.xml')
+        xml.outputLocation = layout.buildDirectory.file('reports/jacoco/report.xml')
     }
 }
 check.dependsOn jacocoTestReport
