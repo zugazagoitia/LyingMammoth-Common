@@ -20,19 +20,21 @@
 package com.zugazagoitia.lyingMammoth.common.util;
 
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 
 import java.nio.charset.StandardCharsets;
 import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Base64;
 
 public class JsonSigner {
 
     private final KeyPair key;
-
+    public static final SignatureAlgorithm algo = SignatureAlgorithm.RS512;
     public JsonSigner(PublicKey pub, PrivateKey priv) {
         key = new KeyPair(pub, priv);
     }
@@ -40,9 +42,38 @@ public class JsonSigner {
     public String signJWS(String payload) {
         return Jwts.builder()
                 .setPayload(encode(payload))
-                .signWith(key.getPrivate(),SignatureAlgorithm.RS512)
+                .signWith(key.getPrivate(),algo)
                 .compact();
     }
+
+    /**
+     * Crear token JWT con la id de un usuario
+     * @param userId La id de un usuario
+     * @return token creado
+     */
+    public String createJWT(Integer userId){
+        return Jwts.builder()
+                .setIssuer("auth0")
+                .claim("userid",userId)
+                .signWith(key.getPrivate(),algo)
+                .setExpiration(Date.valueOf(LocalDate.now().plus(1, ChronoUnit.YEARS)))
+                .setIssuedAt(Date.valueOf(LocalDate.now()))
+                .compact();
+    }
+
+    /**
+     * Decodificar y verificar un token de JWT
+     * @param token El token a comprobar
+     * @return DecodedJWT si es correcto
+     */
+    public Jws<Claims> decodeJWT(String token) throws ExpiredJwtException,UnsupportedJwtException, MalformedJwtException, SecurityException, IllegalArgumentException{
+        return Jwts.parserBuilder()
+                .setSigningKey(key.getPublic())
+                .requireIssuer("auth0")
+                .build()
+                .parseClaimsJws(token);
+    }
+
 
     public String encode(String raw) {
         return Base64.getUrlEncoder()

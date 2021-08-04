@@ -9,6 +9,7 @@ import java.time.Instant;
 @Data
 @Builder
 public class AuthToken {
+
 	private transient User user;
 	private String token;
 	private Instant createdAt;
