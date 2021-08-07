@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
 
-    implementation group: 'com.zugazagoitia.lyingMammoth', name:'common', version: '1.2'
+    implementation group: 'com.zugazagoitia.lyingMammoth', name:'common', version: '1.3'
 }
 
 
@@ -46,7 +46,7 @@ Or else, use maven
     <dependency>
       <groupId>com.zugazagoitia.lyingMammoth</groupId>
       <artifactId>common</artifactId>
-      <version>1.2</version>
+      <version>1.3</version>
     </dependency>
   </dependencies>
   

@@ -16,7 +16,7 @@ public class AuthToken {
 	private Instant lastActivityAt;
 	private long lifetime; //in seconds
 	private InetAddress ipAddress;
-	private String agent; // User Agent / App that emit token
+	private String agent; // User Agent / App that logs-in
 
 	public void touch() {
 		this.lastActivityAt = Instant.now();
