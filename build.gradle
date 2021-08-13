@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'jacoco'
-    id 'io.freefair.lombok' version '6.1.0-m3'
+    id 'io.freefair.lombok' version '6.1.0'
 }
 
 group 'com.zugazagoitia.lyingMammoth'
